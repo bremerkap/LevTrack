@@ -1,0 +1,1592 @@
+[ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Lang,4,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Time,5,14,18]; ]
+import Toybox.Time;
+[ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 7; @symbol_classdef = [ViewDosesView,7,6,19]; @symbol_extends<0> = [WatchUi,7,28,35]; @symbol_extends<1> = [View,7,36,40]; ]
+class ViewDosesView extends WatchUi.View {
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 9; @position = 8; @symbol_vardef = [_showTaken,9,8,18]; @symbol_type<0> = [Boolean,9,22,29]; ]
+    var _showTaken as Boolean;
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 10; @position = 8; @symbol_vardef = [_scrollOffset,10,8,21]; @symbol_type<0> = [Number,10,25,31]; ]
+    var _scrollOffset as Number;
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 12; @symbol_functiondef = [initialize,12,13,23]; @symbol_param<0> = [showTaken,12,24,33]; @symbol_param<0>_type<0> = [Boolean,12,37,44]; ]
+    function initialize(showTaken as Boolean) as Void {
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_12_46_16_4_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 13 8 ]
+        symbol [ View %tmp.2 13 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 13 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 14 8 ]
+        %tmp.4 = lgetv %showTaken;
+        symbol [ showTaken %tmp.4 14 21 30 ];
+        symbol [ _showTaken ? 14 8 18 ];
+        putv self :_showTaken %tmp.4;
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 15 8 ]
+        %tmp.5 = 0;
+        symbol [ _scrollOffset ? 15 8 21 ];
+        putv self :_scrollOffset %tmp.5;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_12_46_16_4_stop:
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 18; @symbol_functiondef = [onLayout,18,13,21]; @symbol_param<0> = [dc,18,22,24]; @symbol_param<0>_type<0> = [Graphics,18,28,36]; @symbol_param<0>_type<1> = [Dc,18,37,39]; ]
+    function onLayout(dc as Graphics.Dc) as Void {
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 22; @symbol_functiondef = [onShow,22,13,19]; ]
+    function onShow() as Void {
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_22_30_24_4_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 23 8 ]
+        symbol [ System %tmp.1 23 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 23 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "View Doses screen shown (taken=";
+        symbol [ _showTaken %tmp.5 23 59 69 ];
+        %tmp.5 = getv ? :_showTaken;
+        %tmp.6 = add %tmp.3 %tmp.5;
+        %tmp.7 = ")";
+        %tmp.8 = add %tmp.6 %tmp.7;
+        invoke %tmp.1 %tmp.2(%tmp.8);
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_22_30_24_4_stop:
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 26; @symbol_functiondef = [onUpdate,26,13,21]; @symbol_param<0> = [dc,26,22,24]; @symbol_param<0>_type<0> = [Graphics,26,28,36]; @symbol_param<0>_type<1> = [Dc,26,37,39]; ]
+    function onUpdate(dc as Graphics.Dc) as Void {
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_26_49_204_4_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 27 8 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_26_49_204_4_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_26_49_204_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 27 12 17 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 27 20 22 ];
+        symbol [ getWidth %tmp.2 27 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 27 12 17 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 28 8 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_26_49_204_4_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_26_49_204_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 28 12 18 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 28 21 23 ];
+        symbol [ getHeight %tmp.5 28 24 33 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+        symbol [ height %height.2 28 12 18 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 30 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 30 8 10 ];
+        symbol [ setColor %tmp.8 30 11 19 ];
+        %tmp.8 = getv function %tmp.7 :setColor;
+        symbol [ Graphics %tmp.9 30 20 28 ];
+        %tmp.9 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.10 30 29 40 ];
+        %tmp.10 = getv %tmp.9 :COLOR_WHITE;
+        symbol [ Graphics %tmp.11 30 42 50 ];
+        %tmp.11 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.12 30 51 62 ];
+        %tmp.12 = getv %tmp.11 :COLOR_BLACK;
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 31 8 ]
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 31 8 10 ];
+        symbol [ clear %tmp.14 31 11 16 ];
+        %tmp.14 = getv function %tmp.13 :clear;
+        invoke %tmp.13 %tmp.14();
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 33 8 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_26_49_204_4_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_26_49_204_4_stop" ]
+        %app.3 = local;
+        symbol [ app %app.3 33 12 15 ];
+        %tmp.15 = self;
+        symbol [ getApp %tmp.16 33 18 24 ];
+        %tmp.16 = getv function %tmp.15 :getApp;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        lputv %app.3 %tmp.17;
+        symbol [ app %app.3 33 12 15 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 34 8 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_26_49_204_4_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_26_49_204_4_stop" ]
+        %schedules.4 = local;
+        symbol [ schedules %schedules.4 34 12 21 ];
+        %tmp.18 = lgetv %app.3;
+        symbol [ app %tmp.18 34 24 27 ];
+        symbol [ getSchedules %tmp.19 34 28 40 ];
+        %tmp.19 = getv function %tmp.18 :getSchedules;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        lputv %schedules.4 %tmp.20;
+        symbol [ schedules %schedules.4 34 12 21 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 37 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 37 8 10 ];
+        symbol [ setColor %tmp.22 37 11 19 ];
+        %tmp.22 = getv function %tmp.21 :setColor;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_37_20_37_65_begin:
+        symbol [ _showTaken %tmp.24 37 20 30 ];
+        %tmp.24 = getv ? :_showTaken;
+        bf %tmp.24 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_37_20_37_65_else_false;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_37_20_37_65_true:
+        symbol [ Graphics %tmp.25 37 33 41 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ COLOR_GREEN %tmp.26 37 42 53 ];
+        %tmp.26 = getv %tmp.25 :COLOR_GREEN;
+        push %tmp.26;
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_37_20_37_65_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_37_20_37_65_else_false:
+        symbol [ Graphics %tmp.27 37 56 64 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.28 37 65 74 ];
+        %tmp.28 = getv %tmp.27 :COLOR_RED;
+        push %tmp.28;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_37_20_37_65_end:
+        %tmp.29 = phi [%tmp.24 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_37_20_37_65_begin] [%tmp.26 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_37_20_37_65_true] [%tmp.28 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_37_20_37_65_else_false] [%tmp.29 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_37_20_37_65_end];
+        symbol [ Graphics %tmp.30 37 76 84 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.31 37 85 102 ];
+        %tmp.31 = getv %tmp.30 :COLOR_TRANSPARENT;
+        invoke %tmp.21 %tmp.22(%tmp.29, %tmp.31);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 38 8 ]
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 38 8 10 ];
+        symbol [ drawText %tmp.33 38 11 19 ];
+        %tmp.33 = getv function %tmp.32 :drawText;
+        %tmp.34 = lgetv %width.1;
+        symbol [ width %tmp.34 39 12 17 ];
+        %tmp.35 = 2;
+        %tmp.36 = div %tmp.34 %tmp.35;
+        %tmp.37 = 5;
+        symbol [ Graphics %tmp.38 41 12 20 ];
+        %tmp.38 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.39 41 21 30 ];
+        %tmp.39 = getv %tmp.38 :FONT_TINY;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_42_12_42_41_begin:
+        symbol [ _showTaken %tmp.41 42 12 22 ];
+        %tmp.41 = getv ? :_showTaken;
+        bf %tmp.41 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_42_12_42_41_else_false;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_42_12_42_41_true:
+        %tmp.42 = "Doses Taken";
+        push %tmp.42;
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_42_12_42_41_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_42_12_42_41_else_false:
+        %tmp.43 = "Doses Missed";
+        push %tmp.43;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_42_12_42_41_end:
+        %tmp.44 = phi [%tmp.41 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_42_12_42_41_begin] [%tmp.42 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_42_12_42_41_true] [%tmp.43 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_42_12_42_41_else_false] [%tmp.44 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_42_12_42_41_end];
+        symbol [ Graphics %tmp.45 43 12 20 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.46 43 21 40 ];
+        %tmp.46 = getv %tmp.45 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.32 %tmp.33(%tmp.36, %tmp.37, %tmp.39, %tmp.44, %tmp.46);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 47 8 ]
+        %tmp.47 = lgetv %dc;
+        symbol [ dc %tmp.47 47 8 10 ];
+        symbol [ drawLine %tmp.48 47 11 19 ];
+        %tmp.48 = getv function %tmp.47 :drawLine;
+        %tmp.49 = 10;
+        %tmp.50 = 25;
+        %tmp.51 = lgetv %width.1;
+        symbol [ width %tmp.51 47 28 33 ];
+        %tmp.52 = 10;
+        %tmp.53 = sub %tmp.51 %tmp.52;
+        %tmp.54 = 25;
+        invoke %tmp.47 %tmp.48(%tmp.49, %tmp.50, %tmp.53, %tmp.54);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 50 8 ]
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_50_8_193_8_if_stmt:
+        %tmp.55 = lgetv %schedules.4;
+        symbol [ schedules %tmp.55 50 12 21 ];
+        symbol [ size %tmp.56 50 22 26 ];
+        %tmp.56 = getv function %tmp.55 :size;
+        %tmp.57 = invoke %tmp.55 %tmp.56();
+        %tmp.58 = 0;
+        %tmp.59 = eq %tmp.57 %tmp.58;
+        bf %tmp.59 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_50_8_193_8_if_else_false;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_50_8_193_8_if_true:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_50_35_66_8_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 51 12 ]
+        %tmp.60 = lgetv %dc;
+        symbol [ dc %tmp.60 51 12 14 ];
+        symbol [ setColor %tmp.61 51 15 23 ];
+        %tmp.61 = getv function %tmp.60 :setColor;
+        symbol [ Graphics %tmp.62 51 24 32 ];
+        %tmp.62 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.63 51 33 46 ];
+        %tmp.63 = getv %tmp.62 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.64 51 48 56 ];
+        %tmp.64 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.65 51 57 74 ];
+        %tmp.65 = getv %tmp.64 :COLOR_TRANSPARENT;
+        invoke %tmp.60 %tmp.61(%tmp.63, %tmp.65);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 52 12 ]
+        %tmp.66 = lgetv %dc;
+        symbol [ dc %tmp.66 52 12 14 ];
+        symbol [ drawText %tmp.67 52 15 23 ];
+        %tmp.67 = getv function %tmp.66 :drawText;
+        %tmp.68 = lgetv %width.1;
+        symbol [ width %tmp.68 53 16 21 ];
+        %tmp.69 = 2;
+        %tmp.70 = div %tmp.68 %tmp.69;
+        %tmp.71 = lgetv %height.2;
+        symbol [ height %tmp.71 54 16 22 ];
+        %tmp.72 = 2;
+        %tmp.73 = div %tmp.71 %tmp.72;
+        %tmp.74 = 15;
+        %tmp.75 = sub %tmp.73 %tmp.74;
+        symbol [ Graphics %tmp.76 55 16 24 ];
+        %tmp.76 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.77 55 25 35 ];
+        %tmp.77 = getv %tmp.76 :FONT_SMALL;
+        %tmp.78 = "No schedules";
+        symbol [ Graphics %tmp.79 57 16 24 ];
+        %tmp.79 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.80 57 25 44 ];
+        %tmp.80 = getv %tmp.79 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.66 %tmp.67(%tmp.70, %tmp.75, %tmp.77, %tmp.78, %tmp.80);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 59 12 ]
+        %tmp.81 = lgetv %dc;
+        symbol [ dc %tmp.81 59 12 14 ];
+        symbol [ drawText %tmp.82 59 15 23 ];
+        %tmp.82 = getv function %tmp.81 :drawText;
+        %tmp.83 = lgetv %width.1;
+        symbol [ width %tmp.83 60 16 21 ];
+        %tmp.84 = 2;
+        %tmp.85 = div %tmp.83 %tmp.84;
+        %tmp.86 = lgetv %height.2;
+        symbol [ height %tmp.86 61 16 22 ];
+        %tmp.87 = 2;
+        %tmp.88 = div %tmp.86 %tmp.87;
+        %tmp.89 = 5;
+        %tmp.90 = add %tmp.88 %tmp.89;
+        symbol [ Graphics %tmp.91 62 16 24 ];
+        %tmp.91 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.92 62 25 35 ];
+        %tmp.92 = getv %tmp.91 :FONT_XTINY;
+        %tmp.93 = "Add one from menu";
+        symbol [ Graphics %tmp.94 64 16 24 ];
+        %tmp.94 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.95 64 25 44 ];
+        %tmp.95 = getv %tmp.94 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.81 %tmp.82(%tmp.85, %tmp.90, %tmp.92, %tmp.93, %tmp.95);
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_50_35_66_8_stop:
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_50_8_193_8_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_50_8_193_8_if_else_false:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_66_15_193_8_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 68 12 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_66_15_193_8_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_66_15_193_8_stop" ]
+        %allDoses.5 = local;
+        symbol [ allDoses %allDoses.5 68 16 24 ];
+        %tmp.96 = newa 0;
+        lputv %allDoses.5 %tmp.96;
+        symbol [ allDoses %allDoses.5 68 16 24 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 70 12 ]
+        for @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_12_82_12_for_test @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_12_82_12_for_incr @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_12_82_12_for_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_12_82_12_for_init:
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_12_82_12_for_begin" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_12_82_12_for_end" ]
+        %i.6 = local;
+        symbol [ i %i.6 70 21 22 ];
+        %tmp.97 = 0;
+        lputv %i.6 %tmp.97;
+        symbol [ i %i.6 70 21 22 ];
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_12_82_12_for_test:
+        %tmp.98 = lgetv %i.6;
+        symbol [ i %tmp.98 70 28 29 ];
+        %tmp.99 = lgetv %schedules.4;
+        symbol [ schedules %tmp.99 70 32 41 ];
+        symbol [ size %tmp.100 70 42 46 ];
+        %tmp.100 = getv function %tmp.99 :size;
+        %tmp.101 = invoke %tmp.99 %tmp.100();
+        %tmp.102 = lt %tmp.98 %tmp.101;
+        bf %tmp.102 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_12_82_12_for_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_12_82_12_for_begin:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_55_82_12_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 71 16 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_55_82_12_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_55_82_12_stop" ]
+        %schedule.7 = local;
+        symbol [ schedule %schedule.7 71 20 28 ];
+        %tmp.103 = lgetv %schedules.4;
+        symbol [ schedules %tmp.103 71 31 40 ];
+        %tmp.104 = lgetv %i.6;
+        symbol [ i %tmp.104 71 41 42 ];
+        %tmp.105 = agetv %tmp.103 %tmp.104;
+        %tmp.106 = as %tmp.105 Dictionary;
+        symbol [ Dictionary %tmp.106 71 47 57 ];
+        lputv %schedule.7 %tmp.106;
+        symbol [ schedule %schedule.7 71 20 28 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 72 16 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_55_82_12_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_55_82_12_stop" ]
+        %doses.8 = local;
+        symbol [ doses %doses.8 72 20 25 ];
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_72_28_72_110_begin:
+        symbol [ _showTaken %tmp.108 72 28 38 ];
+        %tmp.108 = getv ? :_showTaken;
+        bf %tmp.108 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_72_28_72_110_else_false;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_72_28_72_110_true:
+        %tmp.109 = lgetv %schedule.7;
+        symbol [ schedule %tmp.109 72 42 50 ];
+        %tmp.110 = "dosesTaken";
+        %tmp.111 = agetv %tmp.109 %tmp.110;
+        %tmp.112 = as %tmp.111 Array;
+        symbol [ Array %tmp.112 72 68 73 ];
+        push %tmp.112;
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_72_28_72_110_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_72_28_72_110_else_false:
+        %tmp.113 = lgetv %schedule.7;
+        symbol [ schedule %tmp.113 72 78 86 ];
+        %tmp.114 = "dosesMissed";
+        %tmp.115 = agetv %tmp.113 %tmp.114;
+        %tmp.116 = as %tmp.115 Array;
+        symbol [ Array %tmp.116 72 105 110 ];
+        push %tmp.116;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_72_28_72_110_end:
+        %tmp.117 = phi [%tmp.108 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_72_28_72_110_begin] [%tmp.112 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_72_28_72_110_true] [%tmp.116 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_72_28_72_110_else_false] [%tmp.117 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_72_28_72_110_end];
+        lputv %doses.8 %tmp.117;
+        symbol [ doses %doses.8 72 20 25 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 75 16 ]
+        for @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_16_81_16_for_test @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_16_81_16_for_incr @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_16_81_16_for_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_16_81_16_for_init:
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_16_81_16_for_begin" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_16_81_16_for_end" ]
+        %j.9 = local;
+        symbol [ j %j.9 75 25 26 ];
+        %tmp.118 = 0;
+        lputv %j.9 %tmp.118;
+        symbol [ j %j.9 75 25 26 ];
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_16_81_16_for_test:
+        %tmp.119 = lgetv %j.9;
+        symbol [ j %tmp.119 75 32 33 ];
+        %tmp.120 = lgetv %doses.8;
+        symbol [ doses %tmp.120 75 36 41 ];
+        symbol [ size %tmp.121 75 42 46 ];
+        %tmp.121 = getv function %tmp.120 :size;
+        %tmp.122 = invoke %tmp.120 %tmp.121();
+        %tmp.123 = lt %tmp.119 %tmp.122;
+        bf %tmp.123 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_16_81_16_for_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_16_81_16_for_begin:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_55_81_16_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 76 20 ]
+        %tmp.124 = lgetv %allDoses.5;
+        symbol [ allDoses %tmp.124 76 20 28 ];
+        symbol [ add %tmp.125 76 29 32 ];
+        %tmp.125 = getv function %tmp.124 :add;
+        %tmp.126 = newd 3;
+        %tmp.127 = "timestamp";
+        %tmp.128 = lgetv %doses.8;
+        symbol [ doses %tmp.128 77 39 44 ];
+        %tmp.129 = lgetv %j.9;
+        symbol [ j %tmp.129 77 45 46 ];
+        %tmp.130 = agetv %tmp.128 %tmp.129;
+        %tmp.131 = dup %tmp.126;
+        %tmp.132 = aputv %tmp.131 %tmp.127 %tmp.130;
+        %tmp.133 = "scheduleIndex";
+        %tmp.134 = lgetv %i.6;
+        symbol [ i %tmp.134 78 43 44 ];
+        %tmp.135 = dup %tmp.132;
+        %tmp.136 = aputv %tmp.135 %tmp.133 %tmp.134;
+        %tmp.137 = "scheduledTime";
+        %tmp.138 = lgetv %schedule.7;
+        symbol [ schedule %tmp.138 79 43 51 ];
+        %tmp.139 = "scheduledTime";
+        %tmp.140 = agetv %tmp.138 %tmp.139;
+        %tmp.141 = dup %tmp.136;
+        %tmp.142 = aputv %tmp.141 %tmp.137 %tmp.140;
+        invoke %tmp.124 %tmp.125(%tmp.142);
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_55_81_16_stop:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_16_81_16_for_incr:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 75 ]
+        %tmp.145 = lgetv %j.9;
+        symbol [ j %tmp.145 75 50 51 ];
+        %tmp.146 = add %tmp.145 1;
+        lputv %j.9 %tmp.146;
+        symbol [ j %j.9 75 50 51 ];
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_16_81_16_for_test;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_75_16_81_16_for_end:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_55_82_12_stop:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_12_82_12_for_incr:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 70 ]
+        %tmp.149 = lgetv %i.6;
+        symbol [ i %tmp.149 70 50 51 ];
+        %tmp.150 = add %tmp.149 1;
+        lputv %i.6 %tmp.150;
+        symbol [ i %i.6 70 50 51 ];
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_12_82_12_for_test;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_70_12_82_12_for_end:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 85 12 ]
+        %tmp.151 = self;
+        symbol [ sortDoses %tmp.152 85 23 32 ];
+        %tmp.152 = getv function %tmp.151 :sortDoses;
+        %tmp.153 = lgetv %allDoses.5;
+        symbol [ allDoses %tmp.153 85 33 41 ];
+        %tmp.154 = invoke %tmp.151 %tmp.152(%tmp.153);
+        lputv %allDoses.5 %tmp.154;
+        symbol [ allDoses %allDoses.5 85 12 20 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 87 12 ]
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_87_12_192_12_if_stmt:
+        %tmp.155 = lgetv %allDoses.5;
+        symbol [ allDoses %tmp.155 87 16 24 ];
+        symbol [ size %tmp.156 87 25 29 ];
+        %tmp.156 = getv function %tmp.155 :size;
+        %tmp.157 = invoke %tmp.155 %tmp.156();
+        %tmp.158 = 0;
+        %tmp.159 = eq %tmp.157 %tmp.158;
+        bf %tmp.159 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_87_12_192_12_if_else_false;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_87_12_192_12_if_true:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_87_38_103_12_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 88 16 ]
+        %tmp.160 = lgetv %dc;
+        symbol [ dc %tmp.160 88 16 18 ];
+        symbol [ setColor %tmp.161 88 19 27 ];
+        %tmp.161 = getv function %tmp.160 :setColor;
+        symbol [ Graphics %tmp.162 88 28 36 ];
+        %tmp.162 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.163 88 37 50 ];
+        %tmp.163 = getv %tmp.162 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.164 88 52 60 ];
+        %tmp.164 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.165 88 61 78 ];
+        %tmp.165 = getv %tmp.164 :COLOR_TRANSPARENT;
+        invoke %tmp.160 %tmp.161(%tmp.163, %tmp.165);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 89 16 ]
+        %tmp.166 = lgetv %dc;
+        symbol [ dc %tmp.166 89 16 18 ];
+        symbol [ drawText %tmp.167 89 19 27 ];
+        %tmp.167 = getv function %tmp.166 :drawText;
+        %tmp.168 = lgetv %width.1;
+        symbol [ width %tmp.168 90 20 25 ];
+        %tmp.169 = 2;
+        %tmp.170 = div %tmp.168 %tmp.169;
+        %tmp.171 = lgetv %height.2;
+        symbol [ height %tmp.171 91 20 26 ];
+        %tmp.172 = 2;
+        %tmp.173 = div %tmp.171 %tmp.172;
+        symbol [ Graphics %tmp.174 92 20 28 ];
+        %tmp.174 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.175 92 29 39 ];
+        %tmp.175 = getv %tmp.174 :FONT_SMALL;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_93_20_93_52_begin:
+        symbol [ _showTaken %tmp.177 93 20 30 ];
+        %tmp.177 = getv ? :_showTaken;
+        bf %tmp.177 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_93_20_93_52_else_false;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_93_20_93_52_true:
+        %tmp.178 = "No doses taken";
+        push %tmp.178;
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_93_20_93_52_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_93_20_93_52_else_false:
+        %tmp.179 = "No doses missed";
+        push %tmp.179;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_93_20_93_52_end:
+        %tmp.180 = phi [%tmp.177 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_93_20_93_52_begin] [%tmp.178 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_93_20_93_52_true] [%tmp.179 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_93_20_93_52_else_false] [%tmp.180 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_93_20_93_52_end];
+        symbol [ Graphics %tmp.181 94 20 28 ];
+        %tmp.181 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.182 94 29 48 ];
+        %tmp.182 = getv %tmp.181 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.166 %tmp.167(%tmp.170, %tmp.173, %tmp.175, %tmp.180, %tmp.182);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 96 16 ]
+        %tmp.183 = lgetv %dc;
+        symbol [ dc %tmp.183 96 16 18 ];
+        symbol [ drawText %tmp.184 96 19 27 ];
+        %tmp.184 = getv function %tmp.183 :drawText;
+        %tmp.185 = lgetv %width.1;
+        symbol [ width %tmp.185 97 20 25 ];
+        %tmp.186 = 2;
+        %tmp.187 = div %tmp.185 %tmp.186;
+        %tmp.188 = lgetv %height.2;
+        symbol [ height %tmp.188 98 20 26 ];
+        %tmp.189 = 2;
+        %tmp.190 = div %tmp.188 %tmp.189;
+        %tmp.191 = 25;
+        %tmp.192 = add %tmp.190 %tmp.191;
+        symbol [ Graphics %tmp.193 99 20 28 ];
+        %tmp.193 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.194 99 29 39 ];
+        %tmp.194 = getv %tmp.193 :FONT_XTINY;
+        %tmp.195 = "History will appear here";
+        symbol [ Graphics %tmp.196 101 20 28 ];
+        %tmp.196 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.197 101 29 48 ];
+        %tmp.197 = getv %tmp.196 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.183 %tmp.184(%tmp.187, %tmp.192, %tmp.194, %tmp.195, %tmp.197);
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_87_38_103_12_stop:
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_87_12_192_12_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_87_12_192_12_if_else_false:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_103_19_192_12_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 105 16 ]
+        %tmp.198 = lgetv %dc;
+        symbol [ dc %tmp.198 105 16 18 ];
+        symbol [ setColor %tmp.199 105 19 27 ];
+        %tmp.199 = getv function %tmp.198 :setColor;
+        symbol [ Graphics %tmp.200 105 28 36 ];
+        %tmp.200 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.201 105 37 48 ];
+        %tmp.201 = getv %tmp.200 :COLOR_WHITE;
+        symbol [ Graphics %tmp.202 105 50 58 ];
+        %tmp.202 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.203 105 59 76 ];
+        %tmp.203 = getv %tmp.202 :COLOR_TRANSPARENT;
+        invoke %tmp.198 %tmp.199(%tmp.201, %tmp.203);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 106 16 ]
+        %tmp.204 = lgetv %dc;
+        symbol [ dc %tmp.204 106 16 18 ];
+        symbol [ drawText %tmp.205 106 19 27 ];
+        %tmp.205 = getv function %tmp.204 :drawText;
+        %tmp.206 = lgetv %width.1;
+        symbol [ width %tmp.206 107 20 25 ];
+        %tmp.207 = 2;
+        %tmp.208 = div %tmp.206 %tmp.207;
+        %tmp.209 = 35;
+        symbol [ Graphics %tmp.210 109 20 28 ];
+        %tmp.210 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.211 109 29 39 ];
+        %tmp.211 = getv %tmp.210 :FONT_XTINY;
+        %tmp.212 = "Total: ";
+        %tmp.213 = lgetv %allDoses.5;
+        symbol [ allDoses %tmp.213 110 32 40 ];
+        symbol [ size %tmp.214 110 41 45 ];
+        %tmp.214 = getv function %tmp.213 :size;
+        %tmp.215 = invoke %tmp.213 %tmp.214();
+        %tmp.216 = add %tmp.212 %tmp.215;
+        symbol [ Graphics %tmp.217 111 20 28 ];
+        %tmp.217 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.218 111 29 48 ];
+        %tmp.218 = getv %tmp.217 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.204 %tmp.205(%tmp.208, %tmp.209, %tmp.211, %tmp.216, %tmp.218);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 115 16 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_103_19_192_12_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_103_19_192_12_stop" ]
+        %yPosition.10 = local;
+        symbol [ yPosition %yPosition.10 115 20 29 ];
+        %tmp.219 = 50;
+        lputv %yPosition.10 %tmp.219;
+        symbol [ yPosition %yPosition.10 115 20 29 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 116 16 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_103_19_192_12_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_103_19_192_12_stop" ]
+        %maxVisible.11 = local;
+        symbol [ maxVisible %maxVisible.11 116 20 30 ];
+        %tmp.220 = 6;
+        lputv %maxVisible.11 %tmp.220;
+        symbol [ maxVisible %maxVisible.11 116 20 30 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 117 16 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_103_19_192_12_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_103_19_192_12_stop" ]
+        %startIndex.12 = local;
+        symbol [ startIndex %startIndex.12 117 20 30 ];
+        symbol [ _scrollOffset %tmp.222 117 33 46 ];
+        %tmp.222 = getv ? :_scrollOffset;
+        lputv %startIndex.12 %tmp.222;
+        symbol [ startIndex %startIndex.12 117 20 30 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 118 16 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_103_19_192_12_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_103_19_192_12_stop" ]
+        %endIndex.13 = local;
+        symbol [ endIndex %endIndex.13 118 20 28 ];
+        %tmp.223 = lgetv %startIndex.12;
+        symbol [ startIndex %tmp.223 118 31 41 ];
+        %tmp.224 = lgetv %maxVisible.11;
+        symbol [ maxVisible %tmp.224 118 44 54 ];
+        %tmp.225 = add %tmp.223 %tmp.224;
+        lputv %endIndex.13 %tmp.225;
+        symbol [ endIndex %endIndex.13 118 20 28 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 119 16 ]
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_119_16_121_16_if_stmt:
+        %tmp.226 = lgetv %endIndex.13;
+        symbol [ endIndex %tmp.226 119 20 28 ];
+        %tmp.227 = lgetv %allDoses.5;
+        symbol [ allDoses %tmp.227 119 31 39 ];
+        symbol [ size %tmp.228 119 40 44 ];
+        %tmp.228 = getv function %tmp.227 :size;
+        %tmp.229 = invoke %tmp.227 %tmp.228();
+        %tmp.230 = gt %tmp.226 %tmp.229;
+        bf %tmp.230 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_119_16_121_16_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_119_16_121_16_if_true:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_119_48_121_16_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 120 20 ]
+        %tmp.231 = lgetv %allDoses.5;
+        symbol [ allDoses %tmp.231 120 31 39 ];
+        symbol [ size %tmp.232 120 40 44 ];
+        %tmp.232 = getv function %tmp.231 :size;
+        %tmp.233 = invoke %tmp.231 %tmp.232();
+        lputv %endIndex.13 %tmp.233;
+        symbol [ endIndex %endIndex.13 120 20 28 ];
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_119_48_121_16_stop:
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_119_16_121_16_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_119_16_121_16_if_end:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 123 16 ]
+        for @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_16_165_16_for_test @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_16_165_16_for_incr @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_16_165_16_for_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_16_165_16_for_init:
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_16_165_16_for_begin" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_16_165_16_for_end" ]
+        %i.14 = local;
+        symbol [ i %i.14 123 25 26 ];
+        %tmp.234 = lgetv %startIndex.12;
+        symbol [ startIndex %tmp.234 123 29 39 ];
+        lputv %i.14 %tmp.234;
+        symbol [ i %i.14 123 25 26 ];
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_16_165_16_for_test:
+        %tmp.235 = lgetv %i.14;
+        symbol [ i %tmp.235 123 41 42 ];
+        %tmp.236 = lgetv %endIndex.13;
+        symbol [ endIndex %tmp.236 123 45 53 ];
+        %tmp.237 = lt %tmp.235 %tmp.236;
+        bf %tmp.237 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_16_165_16_for_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_16_165_16_for_begin:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 124 20 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_stop" ]
+        %dose.15 = local;
+        symbol [ dose %dose.15 124 24 28 ];
+        %tmp.238 = lgetv %allDoses.5;
+        symbol [ allDoses %tmp.238 124 31 39 ];
+        %tmp.239 = lgetv %i.14;
+        symbol [ i %tmp.239 124 40 41 ];
+        %tmp.240 = agetv %tmp.238 %tmp.239;
+        %tmp.241 = as %tmp.240 Dictionary;
+        symbol [ Dictionary %tmp.241 124 46 56 ];
+        lputv %dose.15 %tmp.241;
+        symbol [ dose %dose.15 124 24 28 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 125 20 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_stop" ]
+        %timestamp.16 = local;
+        symbol [ timestamp %timestamp.16 125 24 33 ];
+        %tmp.242 = lgetv %dose.15;
+        symbol [ dose %tmp.242 125 36 40 ];
+        %tmp.243 = "timestamp";
+        %tmp.244 = agetv %tmp.242 %tmp.243;
+        %tmp.245 = as %tmp.244 Number;
+        symbol [ Number %tmp.245 125 57 63 ];
+        lputv %timestamp.16 %tmp.245;
+        symbol [ timestamp %timestamp.16 125 24 33 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 126 20 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_stop" ]
+        %scheduleIndex.17 = local;
+        symbol [ scheduleIndex %scheduleIndex.17 126 24 37 ];
+        %tmp.246 = lgetv %dose.15;
+        symbol [ dose %tmp.246 126 40 44 ];
+        %tmp.247 = "scheduleIndex";
+        %tmp.248 = agetv %tmp.246 %tmp.247;
+        %tmp.249 = as %tmp.248 Number;
+        symbol [ Number %tmp.249 126 65 71 ];
+        lputv %scheduleIndex.17 %tmp.249;
+        symbol [ scheduleIndex %scheduleIndex.17 126 24 37 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 127 20 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_stop" ]
+        %scheduledTime.18 = local;
+        symbol [ scheduledTime %scheduledTime.18 127 24 37 ];
+        %tmp.250 = lgetv %dose.15;
+        symbol [ dose %tmp.250 127 40 44 ];
+        %tmp.251 = "scheduledTime";
+        %tmp.252 = agetv %tmp.250 %tmp.251;
+        %tmp.253 = as %tmp.252 String;
+        symbol [ String %tmp.253 127 65 71 ];
+        lputv %scheduledTime.18 %tmp.253;
+        symbol [ scheduledTime %scheduledTime.18 127 24 37 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 130 20 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_stop" ]
+        %moment.19 = local;
+        symbol [ moment %moment.19 130 24 30 ];
+        symbol [ Time %tmp.256 130 37 41 ];
+        %tmp.256 = getm $.Toybox.Time;
+        symbol [ Moment %tmp.257 130 42 48 ];
+        %tmp.257 = getv function ? %tmp.256 :Moment;
+        %tmp.258 = lgetv %timestamp.16;
+        symbol [ timestamp %tmp.258 130 49 58 ];
+        %tmp.254 = newc %tmp.257 (%tmp.258);
+        lputv %moment.19 %tmp.254;
+        symbol [ moment %moment.19 130 24 30 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 131 20 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_stop" ]
+        %info.20 = local;
+        symbol [ info %info.20 131 24 28 ];
+        symbol [ Time %tmp.259 131 31 35 ];
+        %tmp.259 = getm $.Toybox.Time;
+        symbol [ Gregorian %tmp.260 131 36 45 ];
+        %tmp.260 = getv %tmp.259 :Gregorian;
+        symbol [ info %tmp.261 131 46 50 ];
+        %tmp.261 = getv function %tmp.260 :info;
+        %tmp.262 = lgetv %moment.19;
+        symbol [ moment %tmp.262 131 51 57 ];
+        symbol [ Time %tmp.263 131 59 63 ];
+        %tmp.263 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.264 131 64 76 ];
+        %tmp.264 = getv %tmp.263 :FORMAT_SHORT;
+        %tmp.265 = invoke %tmp.260 %tmp.261(%tmp.262, %tmp.264);
+        lputv %info.20 %tmp.265;
+        symbol [ info %info.20 131 24 28 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 133 20 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_stop" ]
+        %dateString.21 = local;
+        symbol [ dateString %dateString.21 133 24 34 ];
+        symbol [ Lang %tmp.266 133 37 41 ];
+        %tmp.266 = getm $.Toybox.Lang;
+        symbol [ format %tmp.267 133 42 48 ];
+        %tmp.267 = getv function %tmp.266 :format;
+        %tmp.268 = "$1$/$2$/$3$";
+        %tmp.269 = newa 3;
+        %tmp.270 = lgetv %info.20;
+        symbol [ info %tmp.270 134 24 28 ];
+        symbol [ month %tmp.271 134 29 34 ];
+        %tmp.271 = getv %tmp.270 :month;
+        symbol [ format %tmp.272 134 35 41 ];
+        %tmp.272 = getv function %tmp.271 :format;
+        %tmp.273 = "%02d";
+        %tmp.274 = invoke %tmp.271 %tmp.272(%tmp.273);
+        %tmp.275 = dup %tmp.269;
+        %tmp.276 = aputv %tmp.275 0 %tmp.274;
+        %tmp.277 = lgetv %info.20;
+        symbol [ info %tmp.277 135 24 28 ];
+        symbol [ day %tmp.278 135 29 32 ];
+        %tmp.278 = getv %tmp.277 :day;
+        symbol [ format %tmp.279 135 33 39 ];
+        %tmp.279 = getv function %tmp.278 :format;
+        %tmp.280 = "%02d";
+        %tmp.281 = invoke %tmp.278 %tmp.279(%tmp.280);
+        %tmp.282 = dup %tmp.276;
+        %tmp.283 = aputv %tmp.282 1 %tmp.281;
+        %tmp.284 = lgetv %info.20;
+        symbol [ info %tmp.284 136 24 28 ];
+        symbol [ year %tmp.285 136 29 33 ];
+        %tmp.285 = getv %tmp.284 :year;
+        symbol [ toString %tmp.286 136 34 42 ];
+        %tmp.286 = getv function %tmp.285 :toString;
+        %tmp.287 = invoke %tmp.285 %tmp.286();
+        symbol [ substring %tmp.288 136 45 54 ];
+        %tmp.288 = getv function %tmp.287 :substring;
+        %tmp.289 = 2;
+        %tmp.290 = 4;
+        %tmp.291 = invoke %tmp.287 %tmp.288(%tmp.289, %tmp.290);
+        %tmp.292 = dup %tmp.283;
+        %tmp.293 = aputv %tmp.292 2 %tmp.291;
+        %tmp.294 = invoke %tmp.266 %tmp.267(%tmp.268, %tmp.293);
+        lputv %dateString.21 %tmp.294;
+        symbol [ dateString %dateString.21 133 24 34 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 139 20 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_stop" ]
+        %timeString.22 = local;
+        symbol [ timeString %timeString.22 139 24 34 ];
+        symbol [ Lang %tmp.295 139 37 41 ];
+        %tmp.295 = getm $.Toybox.Lang;
+        symbol [ format %tmp.296 139 42 48 ];
+        %tmp.296 = getv function %tmp.295 :format;
+        %tmp.297 = "$1$:$2$";
+        %tmp.298 = newa 2;
+        %tmp.299 = lgetv %info.20;
+        symbol [ info %tmp.299 140 24 28 ];
+        symbol [ hour %tmp.300 140 29 33 ];
+        %tmp.300 = getv %tmp.299 :hour;
+        symbol [ format %tmp.301 140 34 40 ];
+        %tmp.301 = getv function %tmp.300 :format;
+        %tmp.302 = "%02d";
+        %tmp.303 = invoke %tmp.300 %tmp.301(%tmp.302);
+        %tmp.304 = dup %tmp.298;
+        %tmp.305 = aputv %tmp.304 0 %tmp.303;
+        %tmp.306 = lgetv %info.20;
+        symbol [ info %tmp.306 141 24 28 ];
+        symbol [ min %tmp.307 141 29 32 ];
+        %tmp.307 = getv %tmp.306 :min;
+        symbol [ format %tmp.308 141 33 39 ];
+        %tmp.308 = getv function %tmp.307 :format;
+        %tmp.309 = "%02d";
+        %tmp.310 = invoke %tmp.307 %tmp.308(%tmp.309);
+        %tmp.311 = dup %tmp.305;
+        %tmp.312 = aputv %tmp.311 1 %tmp.310;
+        %tmp.313 = invoke %tmp.295 %tmp.296(%tmp.297, %tmp.312);
+        lputv %timeString.22 %tmp.313;
+        symbol [ timeString %timeString.22 139 24 34 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 145 20 ]
+        %tmp.314 = lgetv %dc;
+        symbol [ dc %tmp.314 145 20 22 ];
+        symbol [ setColor %tmp.315 145 23 31 ];
+        %tmp.315 = getv function %tmp.314 :setColor;
+        symbol [ Graphics %tmp.316 145 32 40 ];
+        %tmp.316 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.317 145 41 54 ];
+        %tmp.317 = getv %tmp.316 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.318 145 56 64 ];
+        %tmp.318 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.319 145 65 82 ];
+        %tmp.319 = getv %tmp.318 :COLOR_TRANSPARENT;
+        invoke %tmp.314 %tmp.315(%tmp.317, %tmp.319);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 146 20 ]
+        %tmp.320 = lgetv %dc;
+        symbol [ dc %tmp.320 146 20 22 ];
+        symbol [ drawText %tmp.321 146 23 31 ];
+        %tmp.321 = getv function %tmp.320 :drawText;
+        %tmp.322 = 20;
+        %tmp.323 = lgetv %yPosition.10;
+        symbol [ yPosition %tmp.323 148 24 33 ];
+        symbol [ Graphics %tmp.324 149 24 32 ];
+        %tmp.324 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.325 149 33 43 ];
+        %tmp.325 = getv %tmp.324 :FONT_XTINY;
+        %tmp.326 = "Sch ";
+        %tmp.327 = lgetv %scheduleIndex.17;
+        symbol [ scheduleIndex %tmp.327 150 34 47 ];
+        %tmp.328 = 1;
+        %tmp.329 = add %tmp.327 %tmp.328;
+        %tmp.330 = add %tmp.326 %tmp.329;
+        %tmp.331 = " (";
+        %tmp.332 = add %tmp.330 %tmp.331;
+        %tmp.333 = lgetv %scheduledTime.18;
+        symbol [ scheduledTime %tmp.333 150 62 75 ];
+        %tmp.334 = add %tmp.332 %tmp.333;
+        %tmp.335 = ")";
+        %tmp.336 = add %tmp.334 %tmp.335;
+        symbol [ Graphics %tmp.337 151 24 32 ];
+        %tmp.337 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.338 151 33 50 ];
+        %tmp.338 = getv %tmp.337 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.320 %tmp.321(%tmp.322, %tmp.323, %tmp.325, %tmp.336, %tmp.338);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 155 20 ]
+        %tmp.339 = lgetv %dc;
+        symbol [ dc %tmp.339 155 20 22 ];
+        symbol [ setColor %tmp.340 155 23 31 ];
+        %tmp.340 = getv function %tmp.339 :setColor;
+        symbol [ Graphics %tmp.341 155 32 40 ];
+        %tmp.341 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.342 155 41 52 ];
+        %tmp.342 = getv %tmp.341 :COLOR_WHITE;
+        symbol [ Graphics %tmp.343 155 54 62 ];
+        %tmp.343 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.344 155 63 80 ];
+        %tmp.344 = getv %tmp.343 :COLOR_TRANSPARENT;
+        invoke %tmp.339 %tmp.340(%tmp.342, %tmp.344);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 156 20 ]
+        %tmp.345 = lgetv %dc;
+        symbol [ dc %tmp.345 156 20 22 ];
+        symbol [ drawText %tmp.346 156 23 31 ];
+        %tmp.346 = getv function %tmp.345 :drawText;
+        %tmp.347 = 20;
+        %tmp.348 = lgetv %yPosition.10;
+        symbol [ yPosition %tmp.348 158 24 33 ];
+        %tmp.349 = 12;
+        %tmp.350 = add %tmp.348 %tmp.349;
+        symbol [ Graphics %tmp.351 159 24 32 ];
+        %tmp.351 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.352 159 33 42 ];
+        %tmp.352 = getv %tmp.351 :FONT_TINY;
+        %tmp.353 = lgetv %dateString.21;
+        symbol [ dateString %tmp.353 160 24 34 ];
+        %tmp.354 = " ";
+        %tmp.355 = add %tmp.353 %tmp.354;
+        %tmp.356 = lgetv %timeString.22;
+        symbol [ timeString %tmp.356 160 43 53 ];
+        %tmp.357 = add %tmp.355 %tmp.356;
+        symbol [ Graphics %tmp.358 161 24 32 ];
+        %tmp.358 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.359 161 33 50 ];
+        %tmp.359 = getv %tmp.358 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.345 %tmp.346(%tmp.347, %tmp.350, %tmp.352, %tmp.357, %tmp.359);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 164 20 ]
+        %tmp.360 = lgetv %yPosition.10;
+        symbol [ yPosition %tmp.360 164 20 29 ];
+        %tmp.361 = 30;
+        %tmp.362 = add %tmp.360 %tmp.361;
+        lputv %yPosition.10 %tmp.362;
+        symbol [ yPosition %yPosition.10 164 20 29 ];
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_60_165_16_stop:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_16_165_16_for_incr:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 123 ]
+        %tmp.365 = lgetv %i.14;
+        symbol [ i %tmp.365 123 55 56 ];
+        %tmp.366 = add %tmp.365 1;
+        lputv %i.14 %tmp.366;
+        symbol [ i %i.14 123 55 56 ];
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_16_165_16_for_test;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_123_16_165_16_for_end:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 168 16 ]
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_168_16_191_16_if_stmt:
+        %tmp.367 = lgetv %allDoses.5;
+        symbol [ allDoses %tmp.367 168 20 28 ];
+        symbol [ size %tmp.368 168 29 33 ];
+        %tmp.368 = getv function %tmp.367 :size;
+        %tmp.369 = invoke %tmp.367 %tmp.368();
+        %tmp.370 = lgetv %maxVisible.11;
+        symbol [ maxVisible %tmp.370 168 38 48 ];
+        %tmp.371 = gt %tmp.369 %tmp.370;
+        bf %tmp.371 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_168_16_191_16_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_168_16_191_16_if_true:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_168_50_191_16_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 169 20 ]
+        %tmp.372 = lgetv %dc;
+        symbol [ dc %tmp.372 169 20 22 ];
+        symbol [ setColor %tmp.373 169 23 31 ];
+        %tmp.373 = getv function %tmp.372 :setColor;
+        symbol [ Graphics %tmp.374 169 32 40 ];
+        %tmp.374 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.375 169 41 54 ];
+        %tmp.375 = getv %tmp.374 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.376 169 56 64 ];
+        %tmp.376 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.377 169 65 82 ];
+        %tmp.377 = getv %tmp.376 :COLOR_TRANSPARENT;
+        invoke %tmp.372 %tmp.373(%tmp.375, %tmp.377);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 171 20 ]
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_171_20_174_20_if_stmt:
+        symbol [ _scrollOffset %tmp.379 171 24 37 ];
+        %tmp.379 = getv ? :_scrollOffset;
+        %tmp.380 = 0;
+        %tmp.381 = gt %tmp.379 %tmp.380;
+        bf %tmp.381 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_171_20_174_20_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_171_20_174_20_if_true:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_171_43_174_20_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 173 24 ]
+        %tmp.382 = lgetv %dc;
+        symbol [ dc %tmp.382 173 24 26 ];
+        symbol [ drawText %tmp.383 173 27 35 ];
+        %tmp.383 = getv function %tmp.382 :drawText;
+        %tmp.384 = lgetv %width.1;
+        symbol [ width %tmp.384 173 36 41 ];
+        %tmp.385 = 15;
+        %tmp.386 = sub %tmp.384 %tmp.385;
+        %tmp.387 = 40;
+        symbol [ Graphics %tmp.388 173 52 60 ];
+        %tmp.388 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.389 173 61 70 ];
+        %tmp.389 = getv %tmp.388 :FONT_TINY;
+        %tmp.390 = "▲";
+        symbol [ Graphics %tmp.391 173 77 85 ];
+        %tmp.391 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.392 173 86 105 ];
+        %tmp.392 = getv %tmp.391 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.382 %tmp.383(%tmp.386, %tmp.387, %tmp.389, %tmp.390, %tmp.392);
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_171_43_174_20_stop:
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_171_20_174_20_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_171_20_174_20_if_end:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 176 20 ]
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_176_20_179_20_if_stmt:
+        %tmp.393 = lgetv %endIndex.13;
+        symbol [ endIndex %tmp.393 176 24 32 ];
+        %tmp.394 = lgetv %allDoses.5;
+        symbol [ allDoses %tmp.394 176 35 43 ];
+        symbol [ size %tmp.395 176 44 48 ];
+        %tmp.395 = getv function %tmp.394 :size;
+        %tmp.396 = invoke %tmp.394 %tmp.395();
+        %tmp.397 = lt %tmp.393 %tmp.396;
+        bf %tmp.397 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_176_20_179_20_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_176_20_179_20_if_true:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_176_52_179_20_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 178 24 ]
+        %tmp.398 = lgetv %dc;
+        symbol [ dc %tmp.398 178 24 26 ];
+        symbol [ drawText %tmp.399 178 27 35 ];
+        %tmp.399 = getv function %tmp.398 :drawText;
+        %tmp.400 = lgetv %width.1;
+        symbol [ width %tmp.400 178 36 41 ];
+        %tmp.401 = 15;
+        %tmp.402 = sub %tmp.400 %tmp.401;
+        %tmp.403 = lgetv %height.2;
+        symbol [ height %tmp.403 178 48 54 ];
+        %tmp.404 = 50;
+        %tmp.405 = sub %tmp.403 %tmp.404;
+        symbol [ Graphics %tmp.406 178 61 69 ];
+        %tmp.406 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.407 178 70 79 ];
+        %tmp.407 = getv %tmp.406 :FONT_TINY;
+        %tmp.408 = "▼";
+        symbol [ Graphics %tmp.409 178 86 94 ];
+        %tmp.409 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.410 178 95 114 ];
+        %tmp.410 = getv %tmp.409 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.398 %tmp.399(%tmp.402, %tmp.405, %tmp.407, %tmp.408, %tmp.410);
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_176_52_179_20_stop:
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_176_20_179_20_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_176_20_179_20_if_end:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 182 20 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_168_50_191_16_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_168_50_191_16_stop" ]
+        %currentPage.23 = local;
+        symbol [ currentPage %currentPage.23 182 24 35 ];
+        symbol [ _scrollOffset %tmp.412 182 39 52 ];
+        %tmp.412 = getv ? :_scrollOffset;
+        %tmp.413 = lgetv %maxVisible.11;
+        symbol [ maxVisible %tmp.413 182 55 65 ];
+        %tmp.414 = div %tmp.412 %tmp.413;
+        symbol [ toNumber %tmp.415 182 67 75 ];
+        %tmp.415 = getv function %tmp.414 :toNumber;
+        %tmp.416 = invoke %tmp.414 %tmp.415();
+        %tmp.417 = 1;
+        %tmp.418 = add %tmp.416 %tmp.417;
+        lputv %currentPage.23 %tmp.418;
+        symbol [ currentPage %currentPage.23 182 24 35 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 183 20 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_168_50_191_16_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_168_50_191_16_stop" ]
+        %totalPages.24 = local;
+        symbol [ totalPages %totalPages.24 183 24 34 ];
+        %tmp.419 = lgetv %allDoses.5;
+        symbol [ allDoses %tmp.419 183 39 47 ];
+        symbol [ size %tmp.420 183 48 52 ];
+        %tmp.420 = getv function %tmp.419 :size;
+        %tmp.421 = invoke %tmp.419 %tmp.420();
+        %tmp.422 = 1;
+        %tmp.423 = sub %tmp.421 %tmp.422;
+        %tmp.424 = lgetv %maxVisible.11;
+        symbol [ maxVisible %tmp.424 183 62 72 ];
+        %tmp.425 = div %tmp.423 %tmp.424;
+        symbol [ toNumber %tmp.426 183 74 82 ];
+        %tmp.426 = getv function %tmp.425 :toNumber;
+        %tmp.427 = invoke %tmp.425 %tmp.426();
+        %tmp.428 = 1;
+        %tmp.429 = add %tmp.427 %tmp.428;
+        lputv %totalPages.24 %tmp.429;
+        symbol [ totalPages %totalPages.24 183 24 34 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 184 20 ]
+        %tmp.430 = lgetv %dc;
+        symbol [ dc %tmp.430 184 20 22 ];
+        symbol [ drawText %tmp.431 184 23 31 ];
+        %tmp.431 = getv function %tmp.430 :drawText;
+        %tmp.432 = lgetv %width.1;
+        symbol [ width %tmp.432 185 24 29 ];
+        %tmp.433 = 2;
+        %tmp.434 = div %tmp.432 %tmp.433;
+        %tmp.435 = lgetv %height.2;
+        symbol [ height %tmp.435 186 24 30 ];
+        %tmp.436 = 35;
+        %tmp.437 = sub %tmp.435 %tmp.436;
+        symbol [ Graphics %tmp.438 187 24 32 ];
+        %tmp.438 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.439 187 33 43 ];
+        %tmp.439 = getv %tmp.438 :FONT_XTINY;
+        %tmp.440 = lgetv %currentPage.23;
+        symbol [ currentPage %tmp.440 188 24 35 ];
+        %tmp.441 = "/";
+        %tmp.442 = add %tmp.440 %tmp.441;
+        %tmp.443 = lgetv %totalPages.24;
+        symbol [ totalPages %tmp.443 188 44 54 ];
+        %tmp.444 = add %tmp.442 %tmp.443;
+        symbol [ Graphics %tmp.445 189 24 32 ];
+        %tmp.445 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.446 189 33 52 ];
+        %tmp.446 = getv %tmp.445 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.430 %tmp.431(%tmp.434, %tmp.437, %tmp.439, %tmp.444, %tmp.446);
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_168_50_191_16_stop:
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_168_16_191_16_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_168_16_191_16_if_end:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_103_19_192_12_stop:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_87_12_192_12_if_end:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_66_15_193_8_stop:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_50_8_193_8_if_end:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 196 8 ]
+        %tmp.447 = lgetv %dc;
+        symbol [ dc %tmp.447 196 8 10 ];
+        symbol [ setColor %tmp.448 196 11 19 ];
+        %tmp.448 = getv function %tmp.447 :setColor;
+        symbol [ Graphics %tmp.449 196 20 28 ];
+        %tmp.449 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.450 196 29 42 ];
+        %tmp.450 = getv %tmp.449 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.451 196 44 52 ];
+        %tmp.451 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.452 196 53 70 ];
+        %tmp.452 = getv %tmp.451 :COLOR_TRANSPARENT;
+        invoke %tmp.447 %tmp.448(%tmp.450, %tmp.452);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 197 8 ]
+        %tmp.453 = lgetv %dc;
+        symbol [ dc %tmp.453 197 8 10 ];
+        symbol [ drawText %tmp.454 197 11 19 ];
+        %tmp.454 = getv function %tmp.453 :drawText;
+        %tmp.455 = lgetv %width.1;
+        symbol [ width %tmp.455 198 12 17 ];
+        %tmp.456 = 2;
+        %tmp.457 = div %tmp.455 %tmp.456;
+        %tmp.458 = lgetv %height.2;
+        symbol [ height %tmp.458 199 12 18 ];
+        %tmp.459 = 15;
+        %tmp.460 = sub %tmp.458 %tmp.459;
+        symbol [ Graphics %tmp.461 200 12 20 ];
+        %tmp.461 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.462 200 21 31 ];
+        %tmp.462 = getv %tmp.461 :FONT_XTINY;
+        %tmp.463 = "UP/DOWN: Scroll | BACK: Return";
+        symbol [ Graphics %tmp.464 202 12 20 ];
+        %tmp.464 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.465 202 21 40 ];
+        %tmp.465 = getv %tmp.464 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.453 %tmp.454(%tmp.457, %tmp.460, %tmp.462, %tmp.463, %tmp.465);
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_26_49_204_4_stop:
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 206; @symbol_functiondef = [onHide,206,13,19]; ]
+    function onHide() as Void {
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_206_30_208_4_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 207 8 ]
+        symbol [ System %tmp.1 207 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 207 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "View Doses screen hidden";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_206_30_208_4_stop:
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 210; @symbol_functiondef = [scrollUp,210,13,21]; ]
+    function scrollUp() as Void {
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_210_32_215_4_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 211 8 ]
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_211_8_214_8_if_stmt:
+        symbol [ _scrollOffset %tmp.2 211 12 25 ];
+        %tmp.2 = getv ? :_scrollOffset;
+        %tmp.3 = 0;
+        %tmp.4 = gt %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_211_8_214_8_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_211_8_214_8_if_true:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_211_31_214_8_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 212 12 ]
+        symbol [ _scrollOffset %tmp.6 212 28 41 ];
+        %tmp.6 = getv ? :_scrollOffset;
+        %tmp.7 = 1;
+        %tmp.8 = sub %tmp.6 %tmp.7;
+        symbol [ _scrollOffset ? 212 12 25 ];
+        putv self :_scrollOffset %tmp.8;
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 213 12 ]
+        symbol [ WatchUi %tmp.9 213 12 19 ];
+        %tmp.9 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.10 213 20 33 ];
+        %tmp.10 = getv function %tmp.9 :requestUpdate;
+        invoke %tmp.9 %tmp.10();
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_211_31_214_8_stop:
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_211_8_214_8_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_211_8_214_8_if_end:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_210_32_215_4_stop:
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 217; @symbol_functiondef = [scrollDown,217,13,23]; ]
+    function scrollDown() as Void {
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_217_34_234_4_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 218 8 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_217_34_234_4_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_217_34_234_4_stop" ]
+        %app.1 = local;
+        symbol [ app %app.1 218 12 15 ];
+        %tmp.1 = self;
+        symbol [ getApp %tmp.2 218 18 24 ];
+        %tmp.2 = getv function %tmp.1 :getApp;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %app.1 %tmp.3;
+        symbol [ app %app.1 218 12 15 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 219 8 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_217_34_234_4_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_217_34_234_4_stop" ]
+        %schedules.2 = local;
+        symbol [ schedules %schedules.2 219 12 21 ];
+        %tmp.4 = lgetv %app.1;
+        symbol [ app %tmp.4 219 24 27 ];
+        symbol [ getSchedules %tmp.5 219 28 40 ];
+        %tmp.5 = getv function %tmp.4 :getSchedules;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %schedules.2 %tmp.6;
+        symbol [ schedules %schedules.2 219 12 21 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 222 8 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_217_34_234_4_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_217_34_234_4_stop" ]
+        %totalDoses.3 = local;
+        symbol [ totalDoses %totalDoses.3 222 12 22 ];
+        %tmp.7 = 0;
+        lputv %totalDoses.3 %tmp.7;
+        symbol [ totalDoses %totalDoses.3 222 12 22 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 223 8 ]
+        for @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_8_227_8_for_test @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_8_227_8_for_incr @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_8_227_8_for_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_8_227_8_for_init:
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_8_227_8_for_begin" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_8_227_8_for_end" ]
+        %i.4 = local;
+        symbol [ i %i.4 223 17 18 ];
+        %tmp.8 = 0;
+        lputv %i.4 %tmp.8;
+        symbol [ i %i.4 223 17 18 ];
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_8_227_8_for_test:
+        %tmp.9 = lgetv %i.4;
+        symbol [ i %tmp.9 223 24 25 ];
+        %tmp.10 = lgetv %schedules.2;
+        symbol [ schedules %tmp.10 223 28 37 ];
+        symbol [ size %tmp.11 223 38 42 ];
+        %tmp.11 = getv function %tmp.10 :size;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        %tmp.13 = lt %tmp.9 %tmp.12;
+        bf %tmp.13 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_8_227_8_for_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_8_227_8_for_begin:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_51_227_8_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 224 12 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_51_227_8_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_51_227_8_stop" ]
+        %schedule.5 = local;
+        symbol [ schedule %schedule.5 224 16 24 ];
+        %tmp.14 = lgetv %schedules.2;
+        symbol [ schedules %tmp.14 224 27 36 ];
+        %tmp.15 = lgetv %i.4;
+        symbol [ i %tmp.15 224 37 38 ];
+        %tmp.16 = agetv %tmp.14 %tmp.15;
+        %tmp.17 = as %tmp.16 Dictionary;
+        symbol [ Dictionary %tmp.17 224 43 53 ];
+        lputv %schedule.5 %tmp.17;
+        symbol [ schedule %schedule.5 224 16 24 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 225 12 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_51_227_8_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_51_227_8_stop" ]
+        %doses.6 = local;
+        symbol [ doses %doses.6 225 16 21 ];
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_225_24_225_106_begin:
+        symbol [ _showTaken %tmp.19 225 24 34 ];
+        %tmp.19 = getv ? :_showTaken;
+        bf %tmp.19 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_225_24_225_106_else_false;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_225_24_225_106_true:
+        %tmp.20 = lgetv %schedule.5;
+        symbol [ schedule %tmp.20 225 38 46 ];
+        %tmp.21 = "dosesTaken";
+        %tmp.22 = agetv %tmp.20 %tmp.21;
+        %tmp.23 = as %tmp.22 Array;
+        symbol [ Array %tmp.23 225 64 69 ];
+        push %tmp.23;
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_225_24_225_106_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_225_24_225_106_else_false:
+        %tmp.24 = lgetv %schedule.5;
+        symbol [ schedule %tmp.24 225 74 82 ];
+        %tmp.25 = "dosesMissed";
+        %tmp.26 = agetv %tmp.24 %tmp.25;
+        %tmp.27 = as %tmp.26 Array;
+        symbol [ Array %tmp.27 225 101 106 ];
+        push %tmp.27;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_225_24_225_106_end:
+        %tmp.28 = phi [%tmp.19 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_225_24_225_106_begin] [%tmp.23 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_225_24_225_106_true] [%tmp.27 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_225_24_225_106_else_false] [%tmp.28 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_225_24_225_106_end];
+        lputv %doses.6 %tmp.28;
+        symbol [ doses %doses.6 225 16 21 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 226 12 ]
+        %tmp.29 = lgetv %totalDoses.3;
+        symbol [ totalDoses %tmp.29 226 12 22 ];
+        %tmp.30 = lgetv %doses.6;
+        symbol [ doses %tmp.30 226 26 31 ];
+        symbol [ size %tmp.31 226 32 36 ];
+        %tmp.31 = getv function %tmp.30 :size;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = add %tmp.29 %tmp.32;
+        lputv %totalDoses.3 %tmp.33;
+        symbol [ totalDoses %totalDoses.3 226 12 22 ];
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_51_227_8_stop:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_8_227_8_for_incr:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 223 ]
+        %tmp.36 = lgetv %i.4;
+        symbol [ i %tmp.36 223 46 47 ];
+        %tmp.37 = add %tmp.36 1;
+        lputv %i.4 %tmp.37;
+        symbol [ i %i.4 223 46 47 ];
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_8_227_8_for_test;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_223_8_227_8_for_end:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 229 8 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_217_34_234_4_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_217_34_234_4_stop" ]
+        %maxVisible.7 = local;
+        symbol [ maxVisible %maxVisible.7 229 12 22 ];
+        %tmp.38 = 6;
+        lputv %maxVisible.7 %tmp.38;
+        symbol [ maxVisible %maxVisible.7 229 12 22 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 230 8 ]
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_230_8_233_8_if_stmt:
+        symbol [ _scrollOffset %tmp.40 230 12 25 ];
+        %tmp.40 = getv ? :_scrollOffset;
+        %tmp.41 = lgetv %maxVisible.7;
+        symbol [ maxVisible %tmp.41 230 28 38 ];
+        %tmp.42 = add %tmp.40 %tmp.41;
+        %tmp.43 = lgetv %totalDoses.3;
+        symbol [ totalDoses %tmp.43 230 41 51 ];
+        %tmp.44 = lt %tmp.42 %tmp.43;
+        bf %tmp.44 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_230_8_233_8_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_230_8_233_8_if_true:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_230_53_233_8_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 231 12 ]
+        symbol [ _scrollOffset %tmp.46 231 28 41 ];
+        %tmp.46 = getv ? :_scrollOffset;
+        %tmp.47 = 1;
+        %tmp.48 = add %tmp.46 %tmp.47;
+        symbol [ _scrollOffset ? 231 12 25 ];
+        putv self :_scrollOffset %tmp.48;
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 232 12 ]
+        symbol [ WatchUi %tmp.49 232 12 19 ];
+        %tmp.49 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.50 232 20 33 ];
+        %tmp.50 = getv function %tmp.49 :requestUpdate;
+        invoke %tmp.49 %tmp.50();
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_230_53_233_8_stop:
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_230_8_233_8_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_230_8_233_8_if_end:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_217_34_234_4_stop:
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 237; @symbol_functiondef = [sortDoses,237,13,22]; @symbol_param<0> = [doses,237,23,28]; @symbol_param<0>_type<0> = [Array,237,32,37]; @symbol_return<0> = [Array,237,42,47]; ]
+    function sortDoses(doses as Array) as Array {
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_237_48_256_4_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 239 8 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_237_48_256_4_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_237_48_256_4_stop" ]
+        %n.1 = local;
+        symbol [ n %n.1 239 12 13 ];
+        %tmp.1 = lgetv %doses;
+        symbol [ doses %tmp.1 239 16 21 ];
+        symbol [ size %tmp.2 239 22 26 ];
+        %tmp.2 = getv function %tmp.1 :size;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %n.1 %tmp.3;
+        symbol [ n %n.1 239 12 13 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 240 8 ]
+        for @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_8_254_8_for_test @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_8_254_8_for_incr @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_8_254_8_for_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_8_254_8_for_init:
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_8_254_8_for_begin" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_8_254_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 240 17 18 ];
+        %tmp.4 = 0;
+        lputv %i.2 %tmp.4;
+        symbol [ i %i.2 240 17 18 ];
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_8_254_8_for_test:
+        %tmp.5 = lgetv %i.2;
+        symbol [ i %tmp.5 240 24 25 ];
+        %tmp.6 = lgetv %n.1;
+        symbol [ n %tmp.6 240 28 29 ];
+        %tmp.7 = 1;
+        %tmp.8 = sub %tmp.6 %tmp.7;
+        %tmp.9 = lt %tmp.5 %tmp.8;
+        bf %tmp.9 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_8_254_8_for_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_8_254_8_for_begin:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_40_254_8_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 241 12 ]
+        for @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_12_253_12_for_test @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_12_253_12_for_incr @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_12_253_12_for_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_12_253_12_for_init:
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_12_253_12_for_begin" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_12_253_12_for_end" ]
+        %j.3 = local;
+        symbol [ j %j.3 241 21 22 ];
+        %tmp.10 = 0;
+        lputv %j.3 %tmp.10;
+        symbol [ j %j.3 241 21 22 ];
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_12_253_12_for_test:
+        %tmp.11 = lgetv %j.3;
+        symbol [ j %tmp.11 241 28 29 ];
+        %tmp.12 = lgetv %n.1;
+        symbol [ n %tmp.12 241 32 33 ];
+        %tmp.13 = lgetv %i.2;
+        symbol [ i %tmp.13 241 36 37 ];
+        %tmp.14 = sub %tmp.12 %tmp.13;
+        %tmp.15 = 1;
+        %tmp.16 = sub %tmp.14 %tmp.15;
+        %tmp.17 = lt %tmp.11 %tmp.16;
+        bf %tmp.17 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_12_253_12_for_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_12_253_12_for_begin:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_48_253_12_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 242 16 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_48_253_12_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_48_253_12_stop" ]
+        %dose1.4 = local;
+        symbol [ dose1 %dose1.4 242 20 25 ];
+        %tmp.18 = lgetv %doses;
+        symbol [ doses %tmp.18 242 28 33 ];
+        %tmp.19 = lgetv %j.3;
+        symbol [ j %tmp.19 242 34 35 ];
+        %tmp.20 = agetv %tmp.18 %tmp.19;
+        %tmp.21 = as %tmp.20 Dictionary;
+        symbol [ Dictionary %tmp.21 242 40 50 ];
+        lputv %dose1.4 %tmp.21;
+        symbol [ dose1 %dose1.4 242 20 25 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 243 16 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_48_253_12_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_48_253_12_stop" ]
+        %dose2.5 = local;
+        symbol [ dose2 %dose2.5 243 20 25 ];
+        %tmp.22 = lgetv %doses;
+        symbol [ doses %tmp.22 243 28 33 ];
+        %tmp.23 = lgetv %j.3;
+        symbol [ j %tmp.23 243 34 35 ];
+        %tmp.24 = 1;
+        %tmp.25 = add %tmp.23 %tmp.24;
+        %tmp.26 = agetv %tmp.22 %tmp.25;
+        %tmp.27 = as %tmp.26 Dictionary;
+        symbol [ Dictionary %tmp.27 243 44 54 ];
+        lputv %dose2.5 %tmp.27;
+        symbol [ dose2 %dose2.5 243 20 25 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 244 16 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_48_253_12_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_48_253_12_stop" ]
+        %time1.6 = local;
+        symbol [ time1 %time1.6 244 20 25 ];
+        %tmp.28 = lgetv %dose1.4;
+        symbol [ dose1 %tmp.28 244 28 33 ];
+        %tmp.29 = "timestamp";
+        %tmp.30 = agetv %tmp.28 %tmp.29;
+        %tmp.31 = as %tmp.30 Number;
+        symbol [ Number %tmp.31 244 50 56 ];
+        lputv %time1.6 %tmp.31;
+        symbol [ time1 %time1.6 244 20 25 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 245 16 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_48_253_12_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_48_253_12_stop" ]
+        %time2.7 = local;
+        symbol [ time2 %time2.7 245 20 25 ];
+        %tmp.32 = lgetv %dose2.5;
+        symbol [ dose2 %tmp.32 245 28 33 ];
+        %tmp.33 = "timestamp";
+        %tmp.34 = agetv %tmp.32 %tmp.33;
+        %tmp.35 = as %tmp.34 Number;
+        symbol [ Number %tmp.35 245 50 56 ];
+        lputv %time2.7 %tmp.35;
+        symbol [ time2 %time2.7 245 20 25 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 248 16 ]
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_248_16_252_16_if_stmt:
+        %tmp.36 = lgetv %time1.6;
+        symbol [ time1 %tmp.36 248 20 25 ];
+        %tmp.37 = lgetv %time2.7;
+        symbol [ time2 %tmp.37 248 28 33 ];
+        %tmp.38 = lt %tmp.36 %tmp.37;
+        bf %tmp.38 @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_248_16_252_16_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_248_16_252_16_if_true:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_248_35_252_16_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 249 20 ]
+        [ "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_248_35_252_16_start" "C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_248_35_252_16_stop" ]
+        %temp.8 = local;
+        symbol [ temp %temp.8 249 24 28 ];
+        %tmp.39 = lgetv %doses;
+        symbol [ doses %tmp.39 249 31 36 ];
+        %tmp.40 = lgetv %j.3;
+        symbol [ j %tmp.40 249 37 38 ];
+        %tmp.41 = agetv %tmp.39 %tmp.40;
+        lputv %temp.8 %tmp.41;
+        symbol [ temp %temp.8 249 24 28 ];
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 250 20 ]
+        %tmp.42 = lgetv %doses;
+        symbol [ doses %tmp.42 250 20 25 ];
+        %tmp.43 = lgetv %doses;
+        symbol [ doses %tmp.43 250 31 36 ];
+        %tmp.44 = lgetv %j.3;
+        symbol [ j %tmp.44 250 37 38 ];
+        %tmp.45 = 1;
+        %tmp.46 = add %tmp.44 %tmp.45;
+        %tmp.47 = agetv %tmp.43 %tmp.46;
+        %tmp.48 = lgetv %j.3;
+        symbol [ j %tmp.48 250 26 27 ];
+        aputv %tmp.42 %tmp.48 %tmp.47;
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 251 20 ]
+        %tmp.49 = lgetv %doses;
+        symbol [ doses %tmp.49 251 20 25 ];
+        %tmp.50 = lgetv %temp.8;
+        symbol [ temp %tmp.50 251 35 39 ];
+        %tmp.51 = lgetv %j.3;
+        symbol [ j %tmp.51 251 26 27 ];
+        %tmp.52 = 1;
+        %tmp.53 = add %tmp.51 %tmp.52;
+        aputv %tmp.49 %tmp.53 %tmp.50;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_248_35_252_16_stop:
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_248_16_252_16_if_end;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_248_16_252_16_if_end:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_48_253_12_stop:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_12_253_12_for_incr:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 241 ]
+        %tmp.56 = lgetv %j.3;
+        symbol [ j %tmp.56 241 43 44 ];
+        %tmp.57 = add %tmp.56 1;
+        lputv %j.3 %tmp.57;
+        symbol [ j %j.3 241 43 44 ];
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_12_253_12_for_test;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_241_12_253_12_for_end:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_40_254_8_stop:
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_8_254_8_for_incr:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 240 ]
+        %tmp.60 = lgetv %i.2;
+        symbol [ i %tmp.60 240 35 36 ];
+        %tmp.61 = add %tmp.60 1;
+        lputv %i.2 %tmp.61;
+        symbol [ i %i.2 240 35 36 ];
+        goto @C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_8_254_8_for_test;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_240_8_254_8_for_end:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 255 8 ]
+        %tmp.62 = lgetv %doses;
+        symbol [ doses %tmp.62 255 15 20 ];
+        ret %tmp.62;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_237_48_256_4_stop:
+    }
+}
+[ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 259; @symbol_classdef = [ViewDosesDelegate,259,6,23]; @symbol_extends<0> = [WatchUi,259,32,39]; @symbol_extends<1> = [BehaviorDelegate,259,40,56]; ]
+class ViewDosesDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 259; ]
+    <init> {
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 259; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 261; @position = 8; @symbol_vardef = [_view,261,8,13]; @symbol_type<0> = [ViewDosesView,261,17,30]; ]
+    var _view as ViewDosesView;
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 263; @symbol_functiondef = [initialize,263,13,23]; @symbol_param<0> = [view,263,24,28]; @symbol_param<0>_type<0> = [ViewDosesView,263,32,45]; ]
+    function initialize(view as ViewDosesView) as Void {
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_263_47_266_4_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 264 8 ]
+        symbol [ BehaviorDelegate %tmp.2 264 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 264 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 265 8 ]
+        %tmp.4 = lgetv %view;
+        symbol [ view %tmp.4 265 16 20 ];
+        symbol [ _view ? 265 8 13 ];
+        putv self :_view %tmp.4;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_263_47_266_4_stop:
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 268; @symbol_functiondef = [onPreviousPage,268,13,27]; @symbol_return<0> = [Boolean,268,33,40]; ]
+    function onPreviousPage() as Boolean {
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_268_41_272_4_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 269 8 ]
+        symbol [ System %tmp.1 269 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 269 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "UP pressed - scrolling up";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 270 8 ]
+        symbol [ _view %tmp.5 270 8 13 ];
+        %tmp.5 = getv ? :_view;
+        symbol [ scrollUp %tmp.6 270 14 22 ];
+        %tmp.6 = getv function %tmp.5 :scrollUp;
+        invoke %tmp.5 %tmp.6();
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 271 8 ]
+        %tmp.7 = true;
+        ret %tmp.7;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_268_41_272_4_stop:
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 274; @symbol_functiondef = [onNextPage,274,13,23]; @symbol_return<0> = [Boolean,274,29,36]; ]
+    function onNextPage() as Boolean {
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_274_37_278_4_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 275 8 ]
+        symbol [ System %tmp.1 275 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 275 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "DOWN pressed - scrolling down";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 276 8 ]
+        symbol [ _view %tmp.5 276 8 13 ];
+        %tmp.5 = getv ? :_view;
+        symbol [ scrollDown %tmp.6 276 14 24 ];
+        %tmp.6 = getv function %tmp.5 :scrollDown;
+        invoke %tmp.5 %tmp.6();
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 277 8 ]
+        %tmp.7 = true;
+        ret %tmp.7;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_274_37_278_4_stop:
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 280; @symbol_functiondef = [onBack,280,13,19]; @symbol_return<0> = [Boolean,280,25,32]; ]
+    function onBack() as Boolean {
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_280_33_284_4_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 281 8 ]
+        symbol [ System %tmp.1 281 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 281 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "BACK pressed - returning to main screen";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 282 8 ]
+        symbol [ WatchUi %tmp.4 282 8 15 ];
+        %tmp.4 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.5 282 16 23 ];
+        %tmp.5 = getv function %tmp.4 :popView;
+        symbol [ WatchUi %tmp.6 282 24 31 ];
+        %tmp.6 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.7 282 32 47 ];
+        %tmp.7 = getv %tmp.6 :SLIDE_IMMEDIATE;
+        invoke %tmp.4 %tmp.5(%tmp.7);
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 283 8 ]
+        %tmp.8 = true;
+        ret %tmp.8;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_280_33_284_4_stop:
+    }
+    [ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 286; @symbol_functiondef = [onSelect,286,13,21]; @symbol_return<0> = [Boolean,286,27,34]; ]
+    function onSelect() as Boolean {
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_286_35_288_4_start:
+[ "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc" 287 8 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+C__Users_bremo_OneDrive___purdue_edu_ENGR133_Team14_Bremer_Personal_Project_LevTrack_LevTrack2_source_ViewDosesView_copy_mc_286_35_288_4_stop:
+    }
+}
+[ @file = "C:\Users\bremo\OneDrive - purdue.edu\ENGR133_Team14\Bremer_Personal_Project\LevTrack\LevTrack2\source\ViewDosesView copy.mc"; @line = 1; ]
+<init> {
+}
